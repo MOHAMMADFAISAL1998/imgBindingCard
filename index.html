@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img-bind-card</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+<body>
+<div id="product"></div>
+
+
+    <script>
+        var card ="";
+        var data=[
+            {path:"img/a1.webp", id:1, price:6000, brand: "Nike"},
+            {path:"img/a2.webp", id:1, price:5500, brand: "Nike"},
+            {path:"img/a3.webp", id:1, price:14000, brand: "Nike"},
+            {path:"img/a4.webp", id:1, price:3400, brand: "Nike"},
+            {path:"img/a5.webp", id:1, price:9500, brand: "Nike"},
+            {path:"img/a6.webp", id:1, price:15000, brand: "Nike"},
+            {path:"img/a7.webp", id:1, price:18000, brand: "Nike"},
+            {path:"img/a8.webp", id:1, price:12000, brand: "Nike"},
+
+        ];
+        data.forEach(function(key){
+            card+=`<div class='card' align='center'>
+                        <img src='${key.path}'>
+                        <p>${key.id}</p>
+                        <h3>${key.price}</h3>
+                        <p>${key.brand}</p>
+                    </div>`;
+        });
+    
+        var s="";
+        document.getElementById("product").innerHTML=card;
+        
+    </script>
+    
+</body>
+</html>
